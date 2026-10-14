@@ -1,0 +1,11 @@
+# Referencia documental de dependencias Node.js.
+# La instalacion real se realiza con npm install usando package.json.
+express
+mysql2
+dotenv
+jsonwebtoken
+zod
+helmet
+cors
+swagger-ui-express
+swagger-jsdoc
