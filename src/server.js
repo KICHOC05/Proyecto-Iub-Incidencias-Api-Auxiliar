@@ -11,6 +11,7 @@ const notificationsRouter = require("./routes/notificaciones");
 
 const app = express();
 const port = Number(process.env.PORT || 3000);
+const apiPublicUrl = process.env.API_PUBLIC_URL || `http://127.0.0.1:${port}`;
 
 app.use(helmet());
 app.use(cors());
@@ -24,7 +25,7 @@ const swaggerSpec = swaggerJSDoc({
       version: "0.1.0",
       description: "API auxiliar de notificaciones con MySQL.",
     },
-    servers: [{ url: `http://127.0.0.1:${port}` }],
+    servers: [{ url: apiPublicUrl }],
     components: {
       securitySchemes: {
         bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" },

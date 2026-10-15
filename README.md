@@ -25,6 +25,12 @@ MYSQL_USER=root
 MYSQL_PASSWORD=tu_password
 ```
 
+Configura `API_PUBLIC_URL` con la URL publica de la API para que Swagger use el host correcto:
+
+```env
+API_PUBLIC_URL=https://tu-dominio.example.com
+```
+
 La aplicacion crea un pool mediante `mysql2/promise` usando exclusivamente estas variables.
 
 Ejecuta el esquema conectado a la base configurada en `MYSQL_DATABASE`:
